@@ -52,10 +52,12 @@ def move_file(file, destination_folder):
     try:
         shutil.move(str(file), destination_folder / file.name)
         print(f"Moved: {file} -> {destination_folder}")
+        print('\n')
         return True
     
     except Exception as e:
         print(f"Failed to move: {file}. Error: {e}")
+        print('\n')
         return False
 
 
