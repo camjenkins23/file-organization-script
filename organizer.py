@@ -79,7 +79,7 @@ def mime_to_label(file_extension):
         maps a mime response to a simplified version of the file extension given.
     '''
     dictionary = {
-        'openxmlformats-officedocument.wordprocessingml.document': 'docx',
+        'vnd.openxmlformats-officedocument.wordprocessingml.document': 'docx',
         'x-python': 'py',
         'x-zip-compressed': 'zip',
         'plain': 'txt',
@@ -91,7 +91,9 @@ def mime_to_label(file_extension):
     }
 
     if file_extension in dictionary:
-        return dictionary.get(file_extension, file_extension)
+        return dictionary.get(file_extension)
+    else:
+        return file_extension
             
 
 def organize_entire_folder():
@@ -113,8 +115,11 @@ def organize_entire_folder():
             if file.is_file():
                 # attempts to classify every file by its type
                 file_type, _ = mimetypes.guess_type(file)
-                file_type = mime_to_label(file_type.split('/')[-1]) if file_type else 'unknown'
-                sanitized_type = file_type.lower()
+                if file_type:
+                    file_type = mime_to_label(file_type.split('/')[-1])  
+                    sanitized_type = file_type.lower()  
+                else:
+                    sanitized_type = 'unknown'
 
                 # finds or creates a destination folder for the file to be moved to.
                 destination_folder = folder_path / f"{sanitized_type}_files"
