@@ -1,7 +1,9 @@
 # File Organizer Script
 
+
 ## Overview
 The File Organizer Script is a Python program designed to automate file management. It organizes files in a specified folder by categorizing them into subfolders based on their file types or user-specified criteria. This tool simplifies folder organization, making it ideal for managing cluttered directories.
+
 
 ## Features
 - **Organize Entire Folder:** Automatically detect file types and organize all files into categorized subfolders.
@@ -15,6 +17,7 @@ The File Organizer Script is a Python program designed to automate file manageme
 - **Python**
   - Libraries: `shutil`, `mimetypes`, `pathlib`
 
+
 ## Setup
 1. **Clone the Repository** 
 ```bash
@@ -26,10 +29,12 @@ cd file-organizer
 python file_organizer.py
 ```
 3. **Follow the Prompts**
-```python
+```
 Option 1: Organize specific file types by entering the file extension (e.g., txt, pdf, jpg).
 Option 2: Organize the entire folder by categorizing all file types.
 ```
+
+
 ## Usage
 ```python
 from file_organizer import organize_entire_folder, organize_specific_file_type
@@ -42,6 +47,7 @@ organize_specific_file_type()
 
 # Follow the prompts in the terminal to provide the folder path and/or file type.
 ```
+
 
 ## Example Outputs
 ### Organizing Entire Folder
@@ -61,11 +67,12 @@ Organization Complete! Successfully moved 4/4 files.
 **Input**: Specify pdf as the file type.
 
 **Output**:
-```
+```output
 [1/1] Moving: example.pdf -> pdf_files
 
 Organization Complete! Successfully moved 1/1 files.
 ```
+
 
 ## Custom File Type Mappings
 
@@ -84,11 +91,12 @@ For unmapped types, files are categorized under `unknown_files`.
 ## License
 This project is licensed under the MIT License. Feel free to use, modify, and distribute it.
 
+
 ## Contributions
 Contributions are welcome! If you have suggestions for improvements or want to extend functionality, feel free to open an issue or submit a pull request.
+
 
 ## Future Improvements
 - Add support for recursive directory organization.
 - Implement logging for a detailed summary of the operations.
-- Allow undoing of moves.# file-organization-script
-Python script to automate file organization based on types or user-specified criteria.
+- Allow undoing of moves.
