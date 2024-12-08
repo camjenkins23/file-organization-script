@@ -84,10 +84,16 @@ def mime_to_label(file_extension):
         'x-zip-compressed': 'zip',
         'plain': 'txt',
         'msword': 'doc',
-        'vms-excel': 'xsl',
-        'vopenxmlformats-officedocument.spreadsheetml.sheet': 'xlsx',
-        'vms-powerpoint': 'ppt',
-        'openxmlformats-officedocument.presentationml.presentation': 'pptx'
+        'vnd.ms-excel': 'xsl',
+        'vnd.vms-powerpoint': 'ppt',
+        'vnd.openxmlformats-officedocument.presentationml.presentation': 'pptx',
+        'vnd.openxmlformats-officedocument.spreadsheetml.sheet': 'xlsx',
+        'x-icon': 'ico',
+        'x-sh': 'sh',
+        'quicktime': 'MOV',
+        'x-msdownload': 'download',
+        'x-tar': 'tar',
+
     }
 
     if file_extension in dictionary:
